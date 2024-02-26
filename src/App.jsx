@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import Context from "./Context/Context";
 
 function App() {
+  document.title = "Crypto Tax Calculator"
   return (
     <Context>
       <div className="w-full">
