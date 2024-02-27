@@ -14,6 +14,23 @@ export default {
         greenTransparent: "#EBF8F5",
         textGreen: "#0FBB82",
         
+      },
+      screens: {
+        'mobile-small' : '321px',
+        'mobile-medium' : '426px',
+        'mobile-large' : '476px',
+
+        'tablet': '769px',
+        // => @media (min-width: 640px) { ... }
+  
+        'laptop': '1025px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1281px',
+        // => @media (min-width: 1280px) { ... }
+      },
+      backgroundImage: {
+        footerBlue: `url("./src/assets/Images.Frame.png")`,
       }
     },
   },

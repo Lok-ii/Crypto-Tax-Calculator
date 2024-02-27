@@ -31,13 +31,13 @@ const Home = () => {
     tax,
   } = useTaxContext();
   return (
-    <div className="w-full flex justify-center py-12 px-8 gap-4">
-      <div className="w-[75%] flex flex-col items-center gap-10">
+    <div className="w-full flex flex-col table:flex-row items-center tablet:items-start justify-center py-12 px-2 tablet:px-8 gap-4">
+      <div className="w-full tablet:w-[75%] flex flex-col items-center gap-10">
         <div className="w-full flex flex-col bg-white rounded-lg py-12 items-center gap-10">
           <h1 className="text-center text-4xl font-bold">
             Free Crypto Tax Calculator Australia
           </h1>
-          <div className="flex w-[80%] items-center justify-around border-b-2 border-bgColor pb-8">
+          <div className="flex w-[80%] flex-wrap gap-y-4 items-center justify-around border-b-2 border-bgColor pb-8">
             <div className="flex items-center gap-4">
               <label htmlFor="financialYear">Financial year</label>
               <select
@@ -71,8 +71,8 @@ const Home = () => {
               </select>
             </div>
           </div>
-          <div className="flex flex-wrap w-[80%] gap-y-8 items-center justify-around">
-            <div className="w-[35%] flex gap-2 flex-col">
+          <div className="flex flex-wrap w-[80%] mobile-large:flex-row flex-col gap-y-8 items-center justify-around">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ">
               <label className="text-sm " htmlFor="purchase">
                 Enter purchase price of Crypto
               </label>
@@ -89,7 +89,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="w-[35%] flex gap-2 flex-col">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ">
               <label className="text-sm " htmlFor="sale">
                 Enter sale price of Crypto
               </label>
@@ -106,7 +106,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="w-[35%] flex gap-2 flex-col">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ">
               <label className="text-sm " htmlFor="expenses">
                 Enter your Expenses
               </label>
@@ -123,7 +123,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="w-[35%] flex gap-2 flex-col">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ">
               <label className="text-sm " htmlFor="investmentType">
                 Investment Type
               </label>
@@ -169,8 +169,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap w-[80%] gap-y-8 items-center justify-around">
-            <div className="w-[35%] flex gap-2 flex-col">
+          <div className="flex flex-wrap mobile-large:flex-row flex-col w-[80%] gap-y-8 items-center justify-around">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ">
               <label className="text-sm " htmlFor="annualIncome">
                 Select Your Annual Income
               </label>
@@ -192,14 +192,14 @@ const Home = () => {
                 <option value="45">{countryCurrency} 180,001+</option>
               </select>
             </div>
-            <div className="w-[35%] flex gap-2 flex-col">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col">
               <label className="text-sm " htmlFor="taxRate">
                 Tax Rate
               </label>
               <span className="text-xs font-semibold">{taxRate}</span>
             </div>
             <div
-              className={`w-[35%] flex gap-2 flex-col ${
+              className={`w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ${
                 shortTerm ? "hidden" : ""
               }`}
             >
@@ -219,7 +219,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className={`w-[35%] flex gap-2 flex-col ${
+              className={`w-[90%] mobile-large:w-[45%] tablet:w-[35%] flex gap-2 flex-col ${
                 shortTerm ? "hidden" : ""
               }`}
             >
@@ -239,14 +239,14 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center flex-wrap w-[80%] justify-around">
-            <div className="w-[35%] h-[7rem] bg-greenTransparent rounded-lg flex flex-col items-center justify-center">
+          <div className="flex items-center flex-wrap w-[80%] mobile-large:flex-row flex-col gap-y-8 justify-around">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] h-[7rem] bg-greenTransparent rounded-lg flex flex-col items-center justify-center">
               <p className="font-semibold">Net Capital gains tax amount</p>
               <p className="text-lg font-bold text-textGreen">
                 {countryCurrency} {netGains}
               </p>
             </div>
-            <div className="w-[35%] h-[7rem] bg-blueTransparent rounded-lg flex flex-col items-center justify-center">
+            <div className="w-[90%] mobile-large:w-[45%] tablet:w-[35%] h-[7rem] bg-blueTransparent rounded-lg flex flex-col items-center justify-center">
               <p className="font-semibold">The tax you need to pay*</p>
               <p className="text-lg font-bold text-primaryBlue">
                 {countryCurrency} {tax}
@@ -256,7 +256,7 @@ const Home = () => {
         </div>
         <Faq />
       </div>
-      <div className="w-[25%]">
+      <div className="w-[25%] tablet:flex hidden">
         <div className="w-[95%] bg-primaryBlue h-[35rem] rounded-lg flex flex-col items-center justify-center gap-8">
           <h1 className="text-white text-lg font-semibold text-center">
             Get Started with KoinX for FREE

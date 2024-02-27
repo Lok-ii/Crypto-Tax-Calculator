@@ -10,15 +10,18 @@ import { IoMdContact } from "react-icons/io";
 import { IconContext } from "react-icons";
 import footerImg from "../assets/Images/Frame 1000005166.png";
 
-
 const Footer = () => {
   return (
     <>
-      <div className="bg-white py-[5%]">
-        <div className="relative  w-[60%] mx-auto">
-          <img src={bg} alt="" />
-          <div className="absolute w-[90%] top-[50%] left-[50%] -translate-y-1/2  -translate-x-1/2 flex items-center justify-center">
-            <img src={frame} alt="" className="w-[25%]" />
+      <div className="bg-white py-[5%] w-full flex flex-col items-center">
+        <div className={`hidden tablet:flex w-[90%] relative tablet:w-[60%]`}>
+          <div className="w-full h-[15rem]">
+            <img src={bg} alt="" className="w-full h-full"  />
+          </div>
+          <div className="w-[90%] flex items-center justify-center absolute translate-x-16 translate-y-8">
+            <div className="w-[25%]">
+              <img src={frame} alt="" />
+            </div>
             <div className="flex flex-col items-center gap-2">
               <h1 className="text-xl text-center text-white font-bold">
                 Stay up to date with latest crypto news and events. Subscribe to
@@ -39,11 +42,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black py-[3%]">
-        <div className="w-[80%] mx-auto">
+      <div className="bg-black py-[3%] w-full flex justify-center">
+        <div className="w-[90%] tablet:w-[80%]">
           <div className="top flex justify-between items-center">
             <img src={footerLogo} alt="" />
-            <div className="flex justify-around w-[20%]">
+            <div className="flex items-center justify-around w-[50%] tablet:w-[20%]">
               <IconContext.Provider value={{ color: "#2997F9", size: "22px" }}>
                 <FaSquareXTwitter />
                 <IoLogoYoutube />
@@ -54,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
           <hr />
-          <div className="text-white flex justify-between my-10">
+          <div className="text-white flex flex-wrap gap-y-8 justify-between my-10">
             <ul className="flex flex-col gap-3">
               <li className="font-bold">Crypto Taxes for </li>
               <li>Individuals and investors</li>
